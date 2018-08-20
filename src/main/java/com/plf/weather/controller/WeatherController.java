@@ -30,6 +30,7 @@ public class WeatherController {
 	@RequestMapping("getThreeDaysForecastByCity")
 	//设置默认参数为深圳
 	public JSON getThreeDaysForecastByCity(@RequestParam(defaultValue="深圳",required=false) String city) throws Exception {
+		System.out.println("进入");
 		//创建httpClient
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		//创建uri构建对象
